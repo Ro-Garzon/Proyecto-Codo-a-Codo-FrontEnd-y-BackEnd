@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"> 
+    <link rel="stylesheet" href="./estilos.css">
+    <link rel="shortcut icon" href="./proyectoImag/favicon.ico" type="image/x-icon">
+    <title>ÉCLAT PARFUMERIE</title>
+    
+</head>
+<body>
+    <header id="idHeader">
+    </header>
+
+    <nav id="idNav">
+    </nav>
+
+    <main>
+        <div class="registro">
+            <div class="contacto">
+                <h3>CONTACTENOS</h3>
+                <p>Envianos un mensaje a través de nuestro formulario de contacto o bien utilizando nuestro correo:</p>
+                <a href="mailto:eclatparfumerie@gmail.com">eclatparfumerie@gmail.com</a>
+            </div>
+            
+            
+            <!--<form action="https://formspree.io/f/mvoybjdl" id="formulario" name= "formulario" class="form" method="post">-->
+                <form action="https://formsubmit.co/71e62698062b9c256e8dfdd699c8f3fc" id="formulario" name= "formulario" class="form" method="post">
+                <h3>REGISTRO DEL CLIENTE</h3>
+                <label for="Nombre">Nombre:</label>
+                <input type="text" name="Nombre" id="Nombre" placeholder="Nombre...">
+                <label for="Email">Email:</label>
+                <input type="email" name="Email" id="Email" placeholder="xxxx@xxxx.com...">
+                <label for="Telefono">Teléfono:</label>
+                <input type="tel" name="Telefono" id="Telefono" >
+                <label for="ID del pedido">ID del pedido:</label>
+                <input type="number" name="IDdelpedido" id="IDdelpedido" placeholder="Ej:1170095339-01">
+                <label for="Mensaje">Mensaje:</label>
+                <textarea id="Mensaje" name="Mensaje" placeholder="Escribe tu consulta.."></textarea>
+                <input type="submit" value="Enviar" id="botonRegistro">
+                <input type="hidden" name="_next" value="https://proyecto-ro-parfumerie-eclat.netlify.app/contacto.html">
+                <input type="hidden" name="_captcha" value="false">
+                
+            </form>
+        </div>
+    </main>
+
+
+    <footer id="idFooter">
+    </footer>
+
+    <script src="./js/main.js"></script>
+    <script src="./js/validarform.js" ></script>
+</body>
+</html>
+
+

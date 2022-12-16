@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Birthstone&family=Estonia&family=Shalimar&family=Splash&family=Tapestry&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+        <link rel="stylesheet" href="./estilos.css">      
+        <link rel="shortcut icon" href="./proyectoImag/favicon.ico" type="image/x-icon">
+        <title>ÉCLAT PARFUMERIE</title>
+        <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    </head>
+    
+    <body>
+        <header id="idHeader">
+        </header>
+
+        <nav id="idNav">
+        </nav>
+
+
+        <main>
+            <div id="appH">
+                <div v-if="cargando==false" class="contenedor">
+                    <div v-for="fragancia of fragH" class="tarjeta">
+                        <img :src="fragancia.imagen" alt="fragancia.nombre">
+                        <h2>{{fragancia.nombre}}</h2>
+                        <p class="detalle">{{fragancia.descripcion}}</p>            
+                        <p>Precio ${{fragancia.precio}}</p>
+                        <a class="boton" href="">Comprar</a>
+                    </div>
+                </div>
+
+                <div v-else  class="fondoCargando">
+                    <div class="contenedorCargando">
+                        <div class="cargando"></div> 
+                        <div class="cargando2"></div> 
+                    </div> 
+                </div>     
+            </div>
+        </main>
+
+        <footer id="idFooter">
+        </footer>
+
+        <script src="./js/main.js"></script>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <script src="./js/cargaproductos.js"></script>
+    </body>
+</html>

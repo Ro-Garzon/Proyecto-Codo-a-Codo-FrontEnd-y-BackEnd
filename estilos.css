@@ -1,0 +1,642 @@
+*{
+    padding: 0px;  
+    margin: 0px;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body{
+    background-color: #fcf8f8;
+    font-family: sans-serif;
+    height: 100vh;
+}
+
+.grid-container{
+    display: grid;
+    background-color: #fcf8f8;
+    column-gap: 30px;
+    grid-template-areas: 
+    "h h h h h h"
+    "n n n n n n"
+    "m m m m m m"
+    "s1 s1 s1 s1 s1 a"
+    "s2 s2 s2 s2 s2 a"
+    "f f f f f f";
+}
+/*Encabezado*/
+
+header{
+    grid-area: h;
+    text-align: center;
+    background-color:#eee1e1; 
+    padding: 20px;
+    width: 100%;
+}
+
+h1{
+    font-family: 'estonia', cursive;
+    text-align: center;
+    font-size: 3em;
+    color: #000;
+}
+        
+h1,#logo{
+    display: inline-block;
+    margin: 5px;
+}
+
+header img{
+    height: 30px
+}
+
+
+/*menú de navegación*/
+nav{
+    grid-area: n;
+    background-color: #753460;
+    box-shadow: 0px 3px 5px #adabad;
+    height: 50px;
+    width: 100%;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li{
+    line-height: 50px;
+    position: relative;
+}
+
+nav ul li a{
+    color: #dbd8d8;
+    padding: 5px 2px;
+    font-size: 18px;
+}
+
+li a:hover{
+    color: #fff;
+    border-style: hidden hidden solid hidden;
+    border-color:  #fff;
+    transition: .5s;
+    
+}
+
+.submenu{
+    display: none;
+}
+
+.submenu a{
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.menu li:hover .submenu{
+    display: block;
+    background-color: #753460;
+    width: 120%;  
+}
+
+
+.menuboton{
+    padding-right: 20px;
+    color: #dbd8d8;
+    float:right;
+    line-height: 50px;
+    cursor: pointer;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+
+/*main*/
+main {
+    grid-area: m;
+    max-width: 100%;
+}
+
+/*carrusel*/
+.slider{
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0px 3px 5px #dad6d6;
+    margin: 40px 0px;
+    cursor: pointer;
+}
+
+.slider ul{
+    display: flex;
+    animation: change 15s infinite alternate linear;
+    translate: linear;
+    width: 500%;
+}
+
+.slider li{
+    width: 100%;
+    list-style: none;
+}
+
+.slider img{
+    max-width: 100%;
+    height: 100%;
+}
+
+
+@keyframes change{
+    0%{margin-left: 0%;}
+    15%{margin-left: 0%;}
+    
+    20%{margin-left: -100%;}
+    35%{margin-left: -100%;}
+    
+    40%{margin-left: -200%;}
+    55%{margin-left: -200%;}
+    
+    60%{margin-left: -300%;}
+    75%{margin-left: -300%;}
+
+    80%{margin-left: -400%;}
+    100%{margin-left: -400%;}
+}
+
+/*Promociones del home*/
+.section1{
+    grid-area: s1;
+    width: 100%;  
+}
+
+.section2{
+    grid-area: s2;
+    width: 100%;
+}
+
+.section1, .section2{
+    background-color: #fff;
+    margin-bottom: 40px;
+    box-shadow: 0px 3px 5px #dad6d6;
+    padding: 20px 10px;
+}
+.promo{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.promoFoto{
+    width:60%; 
+    max-width: 600px;
+    min-width: 300px;
+    height: 60%; 
+    padding-bottom: 20px;
+}
+
+.promoDetalle{
+    width:30%;
+    min-width: 150px;
+    text-align: center;
+    padding-bottom: 20px;
+    line-height: 2em;
+}
+
+/*Publicidad de cuotas*/
+aside{
+    grid-area: a;
+    background-color:#fff;
+    border: 5px solid #8acebfce;
+    box-shadow: 0px 3px 5px #dad6d6;
+    width:100%;
+    margin-bottom: 40px;
+}
+
+.publicidad{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+}
+
+/*Footer con redes sociales y atribución de íconos*/
+footer{
+    grid-area: f;
+    text-align: center;
+    color:#dbd8d8;
+    background-color: #753460;
+    font-size: 14px;
+    width: 100%;
+    padding: 20px;
+}
+
+#datoempresa p{
+    margin: 20px;
+    font-size: 16px;
+}
+.social img{
+    width: 25px;
+    margin: 20px 5% 40px
+}
+
+footer a{
+    color:#dbd8d8
+    
+}
+
+
+/* For mobile phones: */
+@media only screen and (max-width: 600px) {
+    .grid-container{
+        grid-template-areas: 
+        "h"
+        "n"
+        "m"
+        "a"
+        "s1"
+        "s2"
+        "f"
+    }
+
+    .menuboton{
+        display:inline-block;
+    }
+    
+    #close{
+        display: none;
+    }
+    
+    nav ul{
+        position: relative;
+        top: 40px;
+        width: 100%;
+        height: 500px;
+        background-color: #753460;
+        text-align: left;
+        display: none;
+    }
+    
+
+    nav ul li a{
+        font-size: 18px;
+        margin-left: 30px;
+    }
+
+    .submenu{
+        position: relative;
+        z-index: 10px;
+        top:0;
+        left: 70px;
+        padding:0px;
+        height: inherit;
+        width: 40px;
+        }
+
+    .menu li:hover .submenu{
+        width: 50%;
+    }
+    
+    #check:checked ~ ul{
+        display:block;
+    }
+
+    #check:checked ~ .menuboton #close{
+    display: inline-block;
+    }  
+
+    #check:checked ~ .menuboton #menu{
+    display: none;
+    }   
+
+    .publicidad{
+        justify-content:space-around;
+        gap:5px;
+    }
+    
+    .publicidad img{
+        width: 20%;
+        min-width: 100px;
+        max-width: 120px;
+    }
+}
+
+/* For tablets: */
+@media only screen and (min-width: 600px) {
+    .grid-container{
+        grid-template-areas: 
+        "h"
+        "n"
+        "m"
+        "a"
+        "s1"
+        "s2"
+        "f"
+    }
+
+    .publicidad{
+        justify-content:space-around;
+        gap:5px;
+    }
+    
+    .publicidad img{
+        width: 30%;
+        max-width: 120px;
+    }   
+}
+
+/* For desktop: */
+@media only screen and (min-width: 768px) { 
+    .grid-container{
+        grid-template-areas: 
+        "h h h h h h"
+        "n n n n n n"
+        "m m m m m m"
+        "s1 s1 s1 s1 s1 a"
+        "s2 s2 s2 s2 s2 a"
+        "f f f f f f";
+    }
+
+    .publicidad{
+        justify-content: center;
+        align-content: space-around; 
+    }
+
+    .publicidad img{
+        width: 100%;
+        min-width: 80px;
+        max-width: 120px;   
+    }
+}
+
+
+/* For desktop: */
+
+@media only screen and (min-width: 1200px) {
+    .grid-container{
+        grid-template-areas: 
+        "h h h h h h"
+        "n n n n n n"
+        "m m m m m m"
+        "s1 s1 s1 s1 s1 a"
+        "s2 s2 s2 s2 s2 a"
+        "f f f f f f";
+    } 
+
+    .publicidad{
+        justify-content: center;
+        align-content: space-around; 
+        
+    }
+    .publicidad img{
+        width: 100%;
+        min-width: 80px;
+        max-width: 120px;
+        border: 2px solid #8acebfce;
+        border-style: hidden hidden solid hidden;   
+    }
+}
+
+
+/*Página de contacto*/
+
+.registro{
+    background-color: #bc8f8f;
+    border-radius: 4px;
+    max-width: 600px;
+    margin: 40px auto;
+    width: 90%;
+    padding: 20px 40px;
+}
+
+.contacto{
+    padding: 20px 0px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+
+.contacto a{
+    color: #000;
+    font-weight: bold;
+}
+  
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    row-gap: 20px;
+    padding-top: 20px;
+}
+.form input, .form select, .form textarea{
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+  
+.form textarea{
+    height: 140px;
+}
+        
+#botonRegistro{
+    width: 20%;
+    background-color:#753460;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 80px;
+}
+  
+/*Animación de carga de las páginas con tarjetas*/
+.fondoCargando{
+    background-color:#fcf8f8;
+    position: absolute;
+    z-index: 100px;
+    top: 160px;
+    width: 100%;
+    height: 600px;
+}
+
+.contenedorCargando{
+    position:relative;
+    width: 60px;
+    height: 60px;
+    top: 40%;
+    left:50%
+}
+
+.contenedorCargando .cargando{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: solid 4px transparent;
+    border-top-color:#eb65d9;
+    border-left-color:#eb65d9;
+    border-radius: 50%;
+    animation: cargando 1.5s linear infinite;
+}
+
+.contenedorCargando .cargando2{
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    border: solid 4px transparent;
+    border-top-color:#c9c8c8;
+    border-left-color:#c9c8c8;
+    border-radius: 50%;
+    animation: cargando2 1.5s linear infinite;
+}
+
+@keyframes cargando{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg); 
+    }
+}
+
+@keyframes cargando2{
+    0%{
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+    100%{
+        transform: translate(-50%, -50%) rotate(-360deg);
+    }
+}
+
+
+
+
+/*Tarjetas de productos*/
+.contenedor{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 20px;
+    row-gap: 40px;
+    margin: 40px 0px
+}
+
+.tarjeta{
+    width: 300px;
+    background-color: #fff;
+    border:1px solid gray;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0 3px 10px #d7d7d7;
+}
+    
+.tarjeta img {
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    height:200px;
+    object-fit: cover;    
+}
+    
+.tarjeta h2, .tarjeta p{
+    padding: 10px;
+}
+
+.detalle{
+    padding: 10px;
+    height: 100px;
+}
+    
+.tarjeta>img{
+    width: 100%;
+}
+
+  
+.boton {
+    color: aliceblue;
+    background-color: #eb65d9;
+    border-radius: 3px;
+    padding: 5px;
+    margin: 0px 10px;
+    text-decoration: none; 
+}
+
+    
+
+/*Inicio de sesión*/
+
+.fondosesion{
+    background-color: #bc8f8f;
+    border-radius: 4px;
+    max-width: 600px;
+    margin: 40px auto;
+    width: 90%;
+    padding: 20px 40px;
+}
+
+
+.sesion{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;        
+}
+
+.sesion .title{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 60px;
+}
+
+.sesion a{
+    color: #000;
+}
+
+.diseñoDatos input{
+    height: 40px;
+    width: 250px;
+}
+
+.botonSesion{
+    width: 20%;
+    background-color:#753460;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    min-width: 80px;
+}
+/*Página de sucursales*/
+
+.sucursales{
+    color: rgb(19, 17, 17);
+    background-color: #bc8f8f;
+    border-radius: 4px;
+    width: 90%;
+    height: 90%;
+    margin: 30px auto
+}
+
+.sucursales h2{
+    padding: 20px 0% 2% 6%;
+}
+
+.sucursales p{
+    padding: 0 0 0 4%;
+}
+
+.container_map{
+    width: 100%;
+    height: 80%;
+    padding: 2% 4%;
+}

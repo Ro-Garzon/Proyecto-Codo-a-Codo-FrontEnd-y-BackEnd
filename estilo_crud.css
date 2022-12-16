@@ -1,0 +1,109 @@
+body{
+    background-color: #fcf8f8;
+    padding: 0;
+    margin: 0;
+}
+
+.titulo{
+    background-color: #753460;
+    box-shadow: 0px 3px 5px #adabad;
+}
+
+h1{
+    padding: 15px;
+    color:#dbd8d8;
+    font-size: 25px;
+}
+
+h2{
+    padding: 30px;
+}
+
+.contenedor{
+    margin-top: 40px;
+}
+
+th, td{
+    text-align: center
+}
+
+#form{
+    margin-top: 25px;
+    max-width: 600px;
+}
+
+.categorias{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    gap: 30px;
+    row-gap: 50px;
+    margin: 20px
+}
+.categorias a{
+    width: 230px;
+    height: 230px;
+    border-radius: 8px;
+    line-height: 230px;
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 190%;
+    font-size: 20px;
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+}
+.categorias a:hover{
+    box-shadow: 5px 5px 5px #7f7e7e;
+    font-size: 22px;
+    background-size:230%;
+}
+
+
+#caballeros{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('./img/caballeros.jpg');
+}
+
+#damas{ 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./img/damas.webp');
+}
+#niños{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./img/niños.jpg');
+}
+
+#maq{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),url('./img/maquillaje.jpg');
+}
+
+#promo{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('./img/Promociones.jpg');
+}
+
+.btn{
+    margin: 10px;
+    width: 100px;
+    color:#fff;
+    background-color: #bc8f8f;
+    height: 800 px;
+}
+
+#alta{
+    background-color: rgb(129, 129, 199);
+}
+
+#modificar, #grabar{
+    background-color: rgb(72, 147, 117);
+}
+
+#eliminar{
+    background-color: rgb(189, 85, 85);
+}
+
+img{
+    height: 100px;
+    width: 150px;
+    object-fit: cover;
+}
+
